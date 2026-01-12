@@ -1,3 +1,4 @@
+// Implement your endpoints here - see README.md for instructions
 import Express from "express";
 import { eventstore } from "./eventstore/eventstore";
 
@@ -5,7 +6,7 @@ export const createApp = (store = eventstore()) => {
   const app = Express();
   app.use(Express.json());
 
-  // TODO: Implement endpoints here using the provided store
+  // Your implementation goes here
 
   return { app, store };
 };
