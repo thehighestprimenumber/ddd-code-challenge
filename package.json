@@ -6,13 +6,18 @@
   "packageManager": "yarn@4.6.0+sha224.acd0786f07ffc6c933940eb65fc1d627131ddf5455bddcc295dc90fd",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "devDependencies": {
     "@types/node": "^25.0.6",
+    "@types/supertest": "^6.0.2",
+    "supertest": "^7.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
-    "@types/express": "^5.0.6"
+    "@types/express": "^5.0.6",
+    "vitest": "^3.0.0"
   },
   "dependencies": {
     "express": "^5.2.1"
