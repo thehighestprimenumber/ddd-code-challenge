@@ -5,13 +5,13 @@ export const eventstore = () =>{
   const events: EventType[] = [];
   const eventEmitter = new EventEmitter();
   
-  const commitEvent = (event: EventType) : void => {
+  const commitEvent = async (event: EventType) : Promise<void> => {
     events.push(event);
     eventEmitter.emit(event.name, event);
   };
   
-  const getEvents = () : EventType[] => {
-    return events;
+  const getEvents = async ( accountId: string ) : Promise<EventType[]> => {
+    return events.filter(event => event.accountId === accountId);
   };
 
   return {
